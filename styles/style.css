@@ -1,0 +1,17 @@
+body {
+    background: cornflowerblue;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: disc;
+    margin: 20px 40px
+}
+
+li {
+    padding: 5px;
+}
