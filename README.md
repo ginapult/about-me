@@ -2,6 +2,11 @@
 
 # about-me
 About Me Project - CF201
+Pages I can use to update this file:
+[This one](https://gist.github.com/jxson/1784669) by @jxson used for this template.
+(https://github.com/sindresorhus/pageres/blob/master/readme.md) - was referenced in [this medium article](https://medium.com/@meakaakka/a-beginners-guide-to-writing-a-kickass-readme-7ac01da88ab3) by Akash Nimare.
+[This one](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) by @PurpleBooth.
+[This example of a great README](https://github.com/sindresorhus/pageres/blob/master/readme.md) by @sindresorhus.
 
 ## About Me Project
 This is an “About Me” HTML and JS project for the Code Fellows 201 course.
