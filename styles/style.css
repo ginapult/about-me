@@ -4,19 +4,47 @@ header {
 
 body {
     background: aliceblue;
+    background-image: url(../img/horizon-pixabay.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top;
+    background-size: cover;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
     padding: 40px;
+    text-align: center;
 }
 
 h1 {
-    font-size: 30px;
+    color: white;
+    background: black;
+    font:awesome;
+    font-size: 44px;
     font-weight: bold;
+    padding: 30px;
 }
 
 ul {
-    list-style-type: disc;
+    list-style-type: none;
     margin: 20px 40px;
 }
 
 li {
     padding: 5px;
+    font-weight: bold;
+}
+
+p {
+    padding: 10px;
+}
+
+main {
+    padding: 30px;
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background: black;
 }
