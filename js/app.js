@@ -3,11 +3,11 @@
 //Global variables
 var correctAnswerCount = 0;
 var numQuestions = 7;
-var percentScore = Math.round(correctAnswerCount/numQuestions*100);
 
 //Ask for user's name
 var usersName = prompt('Hi there! So excited to meet you. What\'s your name?');
 console.log('User\'s name is -->' + usersName);
+
 
 //Function for y/n questions
 
@@ -184,10 +184,6 @@ function q7() {
       whichSport = prompt('Sorry, not one of my favorite sports! Try again. You have ' + guessesLeft7 + ' guesses left!');
       // console.log('whichSportGuess-->', whichSportGuess);
       console.log(whichSport);
-
-      //Game tally
-
-      alert('That\'s the end of the game! You got ' + correctAnswerCount + ' answers out of ' + numQuestions + '! That\'s ' + percentScore + '! Thanks for playing with me, ' + usersName + '! I hope you enjoyed it. Click "OK" to visit my site and learn more.');
     }
   }
 }
@@ -201,3 +197,7 @@ if (playGame) {
   q6();
   q7();
 }
+//Game tally
+
+alert('That\'s the end of the game! You got ' + correctAnswerCount + ' answers out of ' + numQuestions + '! Thanks for playing with me, ' + usersName + '! I hope you enjoyed it. Click "OK" to visit my site and learn more.');
+
