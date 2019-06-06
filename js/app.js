@@ -98,19 +98,20 @@ if (playGame) {
   var guessCount6 = 1;
   var numSiblingsAnswer = 6;
   var howManySiblings = prompt('OK, Q6/7: How many siblings do I have? Hint: Guess a number between 0-10! You\'ve got four chances to get it right!');
-  var numSiblingsGuess = parseInt(howManySiblings);
   console.log('numSiblingsGuess-->', numSiblingsGuess);
   
   while (guessCount6 !== q6Guesses) {
     var guessesLeft6 = q6Guesses - guessCount6;
     guessCount6++;
+    
+    var numSiblingsGuess = parseInt(howManySiblings);
 
     if (numSiblingsGuess > numSiblingsAnswer) {
-      numSiblingsGuess = prompt('Too high! Guess again, you have ' + guessesLeft6 + ' guesses left.');
+      howManySiblings = prompt('Too high! Guess again, you have ' + guessesLeft6 + ' guesses left.');
       console.log(numSiblingsGuess, 'too high');
     } 
     else if (numSiblingsGuess < numSiblingsAnswer) {
-      numSiblingsGuess = prompt('Too low! Guess again, you have ' + guessesLeft6 + ' guesses left.');
+      howManySiblings = prompt('Too low! Guess again, you have ' + guessesLeft6 + ' guesses left.');
       console.log(numSiblingsGuess, 'too low');
     }
     else if(numSiblingsGuess === numSiblingsAnswer) {
@@ -120,7 +121,7 @@ if (playGame) {
       break;
     }
     else {
-      howManySiblings = prompt('Please provide answer.');
+      howManySiblings = prompt('Please provide answer.'); //This is not working; when I put in the right answer it gave me this prompt.
     }
   }
 
