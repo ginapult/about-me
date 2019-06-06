@@ -9,31 +9,15 @@ var percentScore = Math.round(correctAnswerCount/numQuestions*100);
 var usersName = prompt('Hi there! So excited to meet you. What\'s your name?');
 console.log('User\'s name is -->' + usersName);
 
-var playGame = confirm('That\'s great, ' + usersName + '! Would you like to play a guessing game to learn a little about me?');
+//Function for y/n questions
 
-if (playGame) { 
-  
-  q1();
-  q2();
-  q3();
-  q4();
-  q5();
-  q6();
-  q7();
+function yesNoQuestions() {
+
+  var yesNoQuestionsArray = [q1(),q2(),q3(),q4(),q5()];
+  for (var i = 0; i < yesNoQuestionsArray.length; i++) {
+    yesNoQuestionsArray[i];
+  }
 }
-  
-console.log(playGame);
-
-
-//Game tally
-
-alert('That\'s the end of the game! You got ' + correctAnswerCount + ' answers out of ' + numQuestions + '! Thanks for playing with me, ' + usersName + '! I hope you enjoyed it. Click "OK" to visit my site and learn more.');
-
-// }
-
-
-
-
 
 //Question 1: Guess whether I can speak any other languages besides english, convert what they write to lowercase
 
@@ -41,7 +25,7 @@ function q1() {
   var otherLanguageYn = prompt('OK, Q1/7: Do you think I can speak any other languages besides English (y/n)?');
   var otherLanguageGuess = otherLanguageYn.toLowerCase();
   console.log('otherLanguageGuess-->', otherLanguageGuess);
-  
+
   if (otherLanguageGuess === 'yes' || otherLanguageGuess === 'y') {
     correctAnswerCount++;
     alert('Great guess! I learned Spanish when I lived in the Dominican Republic! On to question 2!');
@@ -60,7 +44,7 @@ function q2() {
   var fromSeattleYn = prompt('Q2/7: Am I from Seattle (y/n)?');
   var fromSeattleGuess = fromSeattleYn.toLowerCase();
   console.log('fromSeattleGuess-->', fromSeattleGuess);
-  
+
   if (fromSeattleGuess === 'no' || fromSeattleGuess === 'n') {
     correctAnswerCount++;
     alert('Great guess! I am not from Seattle. I moved here from Philadelphia, the city of brotherly and sisterly love! On to question 3!');
@@ -78,7 +62,7 @@ function q3() {
   var playTrumpetYn = prompt('Q3/7: Do I play the trumpet (y/n)?');
   var playTrumpetGuess = playTrumpetYn.toLowerCase();
   console.log('playTrumpetGuess-->', playTrumpetGuess);
-  
+
   if (playTrumpetGuess === 'no' || playTrumpetGuess === 'n') {
     correctAnswerCount++;
     alert('Great guess! I do not play the trumpet, but I LOVE music! Ready for question 4?');
@@ -87,7 +71,7 @@ function q3() {
   } else {
     alert('Nope, I did play it in 3rd grade, but now I just enjoy other people playing - I LOVE music! Let\'s move on to question 4, shall we?!');
     console.log('Q3 playTrumpet guess is incorrect.');
-  }  
+  }
 }
 
 //Question 4: Is Italian my favorite food?
@@ -96,7 +80,7 @@ function q4() {
   var italianFoodFaveYn = prompt('Q4/7: Is Italian my favorite food (y/n)?');
   var italianFoodFaveGuess = italianFoodFaveYn.toLowerCase();
   console.log('italianFoodFaveGuess-->', italianFoodFaveGuess);
-  
+
   if (italianFoodFaveGuess === 'no' || italianFoodFaveGuess === 'n') {
     correctAnswerCount++;
     alert('You\'re right! I love Italian, but Indian cuisine is my favorite - love me some palaak paneer and garlic naan! Let\'s keep going.');
@@ -105,7 +89,7 @@ function q4() {
   } else {
     alert('No, I like Italian food, but Indian cuisine is my favorite - love me some palaak paneer and garlic naan! Let\'s keep going.');
     console.log('Q4 italianFoodFave guess is incorrect.');
-  }    
+  }
 }
 
 
@@ -124,7 +108,7 @@ function q5() {
   } else {
     alert('Sorry! I am the youngest. I\'ve got a big family - want to know how many? Try guessing on question 6!');
     console.log('Q5 youngestInFam guess is incorrect.');
-  }    
+  }
 }
 
 
@@ -136,17 +120,17 @@ function q6() {
   var numSiblingsAnswer = 6;
   var howManySiblings = prompt('OK, Q6/7: How many siblings do I have? Hint: Guess a number between 0-10! You\'ve got four chances to get it right!');
   console.log('numSiblingsGuess-->', numSiblingsGuess);
-  
+
   while (guessCount6 !== q6Guesses) {
     var guessesLeft6 = q6Guesses - guessCount6;
     guessCount6++;
-    
+
     var numSiblingsGuess = parseInt(howManySiblings);
-    
+
     if (numSiblingsGuess > numSiblingsAnswer) {
       howManySiblings = prompt('Too high! Guess again, you have ' + guessesLeft6 + ' guesses left.');
       console.log(numSiblingsGuess, 'too high');
-    } 
+    }
     else if (numSiblingsGuess < numSiblingsAnswer) {
       howManySiblings = prompt('Too low! Guess again, you have ' + guessesLeft6 + ' guesses left.');
       console.log(numSiblingsGuess, 'too low');
@@ -173,12 +157,12 @@ function q7() {
   var guessCount7 = 1;
   var sports = ['basketball','field hockey','pickleball'];
   console.log('whichSportGuess-->', whichSportGuess);
-  
+
   while (guessCount7 !== q7Guesses) {
     var guessesLeft7 = q7Guesses - guessCount7;
     guessCount7++;
     console.log('inside the while loop-->');
-    
+
     for (var i = 0; i < sports.length; i++ ) {
       console.log(sports[i], 'outside the if inside the for loop-->');
       var whichSportGuess = whichSport.toLowerCase();
@@ -187,7 +171,7 @@ function q7() {
         isInArray = true;
         console.log('inside the for loop-->');
       }
-      
+
     }
     if (isInArray === true) {
       correctAnswerCount++;
@@ -195,11 +179,25 @@ function q7() {
       console.log('inside the outer if-->');
       break;
     }
-    
+
     else if (isInArray === false) {
       whichSport = prompt('Sorry, not one of my favorite sports! Try again. You have ' + guessesLeft7 + ' guesses left!');
       // console.log('whichSportGuess-->', whichSportGuess);
       console.log(whichSport);
+
+      //Game tally
+
+      alert('That\'s the end of the game! You got ' + correctAnswerCount + ' answers out of ' + numQuestions + '! That\'s ' + percentScore + '! Thanks for playing with me, ' + usersName + '! I hope you enjoyed it. Click "OK" to visit my site and learn more.');
     }
   }
+}
+var playGame = confirm('That\'s great, ' + usersName + '! Would you like to play a guessing game to learn a little about me?');
+console.log(playGame);
+if (playGame) {
+
+  //Invoke question functions
+
+  yesNoQuestions();
+  q6();
+  q7();
 }
