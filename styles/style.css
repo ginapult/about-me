@@ -9,39 +9,89 @@ body {
     background-attachment: fixed;
     background-position: center top;
     background-size: cover;
-    color: white;
+    color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
+    font-weight: bold;
     padding: 40px;
     text-align: center;
 }
 
+#selfie {
+    margin: 40px;
+    padding: 10px;
+}
+
 h1 {
-    color: white;
     background: black;
+    color: white;
     font:awesome;
     font-size: 44px;
     font-weight: bold;
     padding: 30px;
 }
 
-ul {
-    list-style-type: none;
+h2 {
+    background: black;
+    color: white;
+    font:awesome;
+    font-size: 33px;
+    font-weight: bold;
+    padding: 20px;
+    margin: 100px;
+}
+
+h3 {
+    color:black;
+    font:awesome;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+}
+
+h4 {
+    background: black;
+    color: white;
+    font:awesome;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 20px;
+    margin: 100px;
+}    
+
+ol {
+    list-style-position: inside;
+    list-style-type: decimal;
     margin: 20px 40px;
+    text-align: center;
+}
+
+ul {
+    list-style-position: inside;
+    list-style-type: disc;
+    margin: 20px 40px;
+    text-align: center;
 }
 
 li {
     padding: 5px;
-    font-weight: bold;
+    font-weight: bold
 }
 
 p {
     padding: 10px;
-    color: aliceblue
+    color: black;
 }
 
 main {
+    margin: 30px;
     padding: 30px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    padding: 40px;
+    text-align: center;
 }
 
 footer {
