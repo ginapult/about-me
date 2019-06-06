@@ -147,7 +147,6 @@ if (playGame) {
         isInArray = true;
         console.log('inside the for loop-->');
       }
-    console.log(isInArray);
 
     }
     if (isInArray === true) {
@@ -161,7 +160,6 @@ if (playGame) {
       whichSport = prompt('Sorry, not one of my favorite sports! Try again. You have ' + guessesLeft7 + ' guesses left!');
       // console.log('whichSportGuess-->', whichSportGuess);
       console.log(whichSport);
-      console.log('inside else-->');
     }
   }
 
