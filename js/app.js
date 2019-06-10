@@ -125,6 +125,11 @@ function q6() {
     var guessesLeft6 = q6Guesses - guessCount6;
     guessCount6++;
 
+    // if (guessCount6 > 4) {
+    //   alert('That was four guesses! Let\'s move on to our last question!');
+    //   break;
+    // }
+
     var numSiblingsGuess = parseInt(howManySiblings);
 
     if (numSiblingsGuess > numSiblingsAnswer) {
@@ -175,7 +180,7 @@ function q7() {
     }
     if (isInArray === true) {
       correctAnswerCount++;
-      alert('Yes, you guessed it! I love playing basketball, field hockey, and pickleball too! Awesome job!');
+      alert('Yes, you guessed it! I love playing: ' + sports + '! Awesome job!');
       console.log('inside the outer if-->');
       break;
     }
